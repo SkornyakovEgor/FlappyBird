@@ -20,7 +20,7 @@ flyAudio.src  = "audio/fly.mp3"
 scoreAudio.src = "audio/score.mp3"
 
 
-var gap = 90;
+var gap = 100;
 
 
 document.addEventListener("keydown", moveUp)
@@ -42,7 +42,7 @@ pipe[0] = {
 
 var xPos = 10;
 var yPos = 150;
-var grav = 1.5;
+var grav = 2;
 
 
 var score = 0;
@@ -57,7 +57,7 @@ function draw(){
 
         pipe[i].x --;
 
-        if(pipe[i].x == 80){
+        if(pipe[i].x == 60){
             pipe.push({
                 x : cvs.width,
                 y : Math.floor(Math.random() * pipeUp.height) - pipeUp.height
